@@ -99,12 +99,29 @@ margin-bottom:20px;
 /* Footer */
 
 footer{
-background:#222;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:50px;
-font-size:14px;
+  background:#2a2a2a;
+  color:#fff;
+  padding:22px 30px;
+  margin-top:50px;
+  font-size:14px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+@media(max-width:768px){
+
+  .footer-inner{
+      flex-direction:column;
+      gap:10px;
+      text-align:center;
+  }
+
 }
 
 /* Mobile */
@@ -240,7 +257,15 @@ padding:20px;
 </div>
 
 <footer>
-© 2026 元眞覺修道場 ｜ 版權所有
+  <div class="footer-inner">
+      <div>
+          © 2026 元眞覺修道場 ｜ 版權所有
+      </div>
+
+      <div>
+          會址：桃園市中壢區龍岡路三段124巷43號1樓
+      </div>
+  </div>
 </footer>
 
 </body>
