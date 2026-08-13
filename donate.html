@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捐款專區｜元眞覺修道場</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.8;
+}
+
+/* 辦事時間 */
+.service-time{
+    background:#5b0000;
+    color:#fff;
+    text-align:center;
+    padding:10px 15px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.service-time span{
+    color:#ffd76a;
+}
+
+/* Header */
+header{
+    background:linear-gradient(90deg,#7a0000,#b8860b);
+    padding:20px;
+    color:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:38px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    opacity:.7;
+}
+
+/* Main */
+.main-container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.title-section{
+    font-size:36px;
+    font-weight:bold;
+    border-left:6px solid #7a0000;
+    padding-left:15px;
+    margin-bottom:30px;
+    color:#7a0000;
+}
+
+.article{
+    background:white;
+    padding:35px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* 捐款主圖 */
+.donation-banner{
+    width:100%;
+    margin-bottom:35px;
+}
+
+.donation-banner img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:8px;
+}
+
+/* 說明 */
+.intro{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 35px;
+}
+
+.intro h2{
+    color:#7a0000;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.intro p{
+    font-size:18px;
+}
+
+/* 金額卡片 */
+.donation-options{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin:30px 0 40px;
+}
+
+.donation-card{
+    border:1px solid #e5d5b5;
+    border-radius:10px;
+    padding:28px 20px;
+    text-align:center;
+    background:linear-gradient(180deg,#fffdf8,#fff);
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.donation-card h3{
+    color:#7a0000;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.amount{
+    font-size:42px;
+    font-weight:bold;
+    color:#b8860b;
+    margin:8px 0;
+}
+
+.amount small{
+    font-size:20px;
+}
+
+.donation-card p{
+    min-height:58px;
+    font-size:16px;
+    color:#555;
+}
+
+.donate-button{
+    display:inline-block;
+    margin-top:15px;
+    padding:11px 24px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#7a0000,#b8860b);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:17px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.donate-button:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* 單次捐款 */
+.single-donation{
+    border-top:1px solid #e5d5b5;
+    border-bottom:1px solid #e5d5b5;
+    padding:30px 10px;
+    margin:10px 0 35px;
+    text-align:center;
+}
+
+.single-donation h2{
+    color:#7a0000;
+    margin-bottom:10px;
+}
+
+.single-donation p{
+    font-size:17px;
+}
+
+/* 捐款用途 */
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:25px;
+}
+
+.info-box{
+    background:#faf8f2;
+    border-left:4px solid #b8860b;
+    padding:22px;
+}
+
+.info-box h3{
+    color:#7a0000;
+    margin-bottom:8px;
+}
+
+/* 綠界區 */
+.ecpay-box{
+    margin-top:35px;
+    padding:25px;
+    background:#f4f8ef;
+    border:1px solid #d8e4c9;
+    border-radius:10px;
+    text-align:center;
+}
+
+.ecpay-box h2{
+    color:#4f6d2f;
+    margin-bottom:10px;
+}
+
+.ecpay-note{
+    color:#666;
+    font-size:15px;
+}
+
+/* 注意事項 */
+.notice{
+    margin-top:30px;
+    padding:20px;
+    background:#fff9ed;
+    border-left:4px solid #b8860b;
+}
+
+.notice h3{
+    color:#7a0000;
+    margin-bottom:8px;
+}
+
+/* Footer */
+footer{
+    background:#2a2a2a;
+    color:#fff;
+    padding:22px 30px;
+    margin-top:50px;
+    font-size:14px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .header-inner{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px 18px;
+    }
+
+    .logo{
+        font-size:30px;
+    }
+
+    .main-container{
+        margin:25px auto;
+        padding:0 12px;
+    }
+
+    .title-section{
+        font-size:28px;
+    }
+
+    .article{
+        padding:18px;
+    }
+
+    .donation-options{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .donation-banner img{
+        border-radius:5px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="service-time">
+    <span>📢 辦事時間：</span>
+    每週三 18:00－21:00　｜
+    每週六 15:00－21:00　｜
+    國定假日休辦
+</div>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">元眞覺修道場</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">道場介紹</a></li>
+                <li><a href="share.html">心得分享</a></li>
+                <li><a href="chaoshan.html">朝山活動</a></li>
+                <li><a href="donate.html">捐款專區</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="main-container">
+
+    <div class="title-section">捐款專區</div>
+
+    <div class="article">
+
+        <div class="donation-banner">
+            <img src="donation-monthly.png" alt="中壢元眞道場 道場定期定額捐款">
+        </div>
+
+        <div class="intro">
+            <h2>定期定額支持道場</h2>
+            <p>
+                您的每一份善心，都是持續前行的力量。
+                透過定期定額支持，讓道場能持續推動修行教育、
+                心靈關懷、家庭關懷及社會公益等工作。
+            </p>
+        </div>
+
+        <div class="donation-options">
+
+            <div class="donation-card">
+                <h3>每月捐款</h3>
+                <div class="amount">300<small> 元</small></div>
+                <p>小額持續支持，讓善念長久延續。</p>
+                <a class="donate-button" href="#ecpay">♡ 我要每月捐款 300 元</a>
+            </div>
+
+            <div class="donation-card">
+                <h3>每月捐款</h3>
+                <div class="amount">500<small> 元</small></div>
+                <p>穩定支持道場，讓善行發揮更大的力量。</p>
+                <a class="donate-button" href="#ecpay">♡ 我要每月捐款 500 元</a>
+            </div>
+
+            <div class="donation-card">
+                <h3>每月捐款</h3>
+                <div class="amount">1,000<small> 元</small></div>
+                <p>長期護持道場，讓更多善行得以持續。</p>
+                <a class="donate-button" href="#ecpay">♡ 我要每月捐款 1,000 元</a>
+            </div>
+
+        </div>
+
+        <div class="single-donation">
+            <h2>單次捐款</h2>
+            <p>
+                若您希望以單次方式護持道場，待綠界金流服務完成申請後，
+                此處將提供安全的線上捐款方式。
+            </p>
+            <a class="donate-button" href="#ecpay">單次捐款</a>
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <h3>🌱 捐款用途</h3>
+                <p>
+                    捐款將依道場實際需要，用於修行教育、
+                    道場運作、活動推廣、家庭關懷及公益扶助等相關工作。
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>♡ 定期定額支持</h3>
+                <p>
+                    每月固定支持，讓道場能有較穩定的資源規劃，
+                    持續推動各項修行與公益工作。
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>🧾 捐款收據</h3>
+                <p>
+                    如需捐款收據，請依道場公告之方式提供必要資料，
+                    相關收據開立方式將依實際規定辦理。
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>🔒 安全付款</h3>
+                <p>
+                    線上付款將使用綠界科技 ECPay 金流服務；
+                    待通路申請與設定完成後正式啟用。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="ecpay-box" id="ecpay">
+            <h2>綠界科技 ECPay 金流</h2>
+            <p>
+                本區為綠界金流付款串接位置。
+                <br>
+                待綠界科技通路申請核准後，將把 300 元、500 元、1,000 元
+                定期定額及單次捐款按鈕連接至正式付款頁面。
+            </p>
+            <p class="ecpay-note">
+                ※ 目前按鈕尚未連接正式付款服務，避免在通路核准前產生錯誤交易。
+            </p>
+        </div>
+
+        <div class="notice">
+            <h3>捐款注意事項</h3>
+            <p>
+                1. 定期定額捐款將依捐款人於付款頁面所同意之週期進行扣款。<br>
+                2. 如需停止或變更定期捐款，請依正式付款服務提供之方式辦理。<br>
+                3. 捐款相關資料僅於必要範圍內使用，並依相關個資規範辦理。<br>
+                4. 實際付款、收據及退款相關規則，以正式啟用之金流服務及道場公告為準。
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div>© 2026 元眞覺修道場 ｜ 版權所有</div>
+        <div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
+    </div>
+</footer>
+
+</body>
+</html>
