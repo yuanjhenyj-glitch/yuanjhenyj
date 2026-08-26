@@ -83,11 +83,48 @@ background:#2a2a2a;
 color:#fff;
 }
 
+.service-time{
+    background:#5b0000;
+    color:#fff;
+    text-align:center;
+    padding:10px 15px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.service-time span{
+    color:#ffd76a;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+@media(max-width:768px){
+    .footer-inner{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+
 </style>
 
 </head>
 
 <body>
+<div class="service-time">
+  <span>📢 辦事時間：</span>
+  每週三 18:00－21:00　｜　
+  每週六 15:00－21:00　｜　
+  國定假日休辦
+</div>
+
 
 <header>
 
@@ -137,7 +174,6 @@ color:#fff;
 </p>
 
 </div>
-
 <footer>
   <div class="footer-inner">
       <div>
@@ -149,5 +185,5 @@ color:#fff;
       </div>
   </div>
 </footer>
-</body>
+
 </html>
