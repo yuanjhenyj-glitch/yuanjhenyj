@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>聯絡我們｜元眞道場</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Microsoft JhengHei",sans-serif;
+background:#f5f3ec;
+color:#333;
+line-height:1.8;
+}
+
+/* 辦事時間 */
+.service-time{
+background:#5b0000;
+color:#fff;
+text-align:center;
+padding:10px 15px;
+font-size:15px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+.service-time span{
+color:#ffd76a;
+}
+
+/* Header */
+header{
+background:#fff;
+padding:20px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.header-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+}
+
+.logo{
+font-size:38px;
+font-weight:bold;
+color:#222;
+white-space:nowrap;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:#222;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+padding:8px 4px;
+}
+
+nav a:hover{
+color:#7a0000;
+}
+
+nav a.active{
+color:#7a0000;
+border-bottom:3px solid #7a0000;
+}
+
+/* Hero */
+.hero{
+max-width:1200px;
+margin:0 auto;
+min-height:300px;
+display:flex;
+align-items:center;
+padding:55px 55px;
+background:
+linear-gradient(90deg,rgba(248,246,235,.97) 0%,rgba(248,246,235,.82) 45%,rgba(248,246,235,.20) 100%),
+linear-gradient(135deg,#dfe9dc,#f5f3ec);
+position:relative;
+overflow:hidden;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+right:-80px;
+top:-100px;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(38,91,70,.18),transparent 68%);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+max-width:600px;
+border-left:5px solid #2d634d;
+padding-left:22px;
+}
+
+.hero h1{
+font-size:48px;
+color:#174b39;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:19px;
+color:#555;
+}
+
+/* Main */
+.main{
+max-width:1100px;
+margin:45px auto;
+padding:0 20px;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:stretch;
+}
+
+/* Contact info */
+.info-card,
+.line-card{
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 5px 18px rgba(0,0,0,.10);
+}
+
+.info-card{
+background:#fffdf7;
+padding:35px;
+border:1px solid #e5dfcf;
+}
+
+.card-title{
+font-size:30px;
+font-weight:bold;
+color:#174b39;
+border-bottom:1px dashed #aaa;
+padding-bottom:14px;
+margin-bottom:25px;
+}
+
+.info-item{
+display:flex;
+gap:18px;
+margin-bottom:25px;
+align-items:flex-start;
+}
+
+.icon{
+width:48px;
+height:48px;
+min-width:48px;
+border-radius:50%;
+background:#1d684d;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:23px;
+}
+
+.info-item h3{
+font-size:18px;
+color:#174b39;
+margin-bottom:3px;
+}
+
+.info-item p{
+font-size:17px;
+color:#333;
+word-break:break-word;
+}
+
+.service-list{
+margin:5px 0 0 20px;
+padding-left:18px;
+}
+
+.service-list li{
+margin-bottom:3px;
+}
+
+/* LINE */
+.line-card{
+background:linear-gradient(145deg,#23815f,#176248);
+color:#fff;
+padding:35px;
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.line-card h2{
+font-size:32px;
+margin-bottom:5px;
+}
+
+.line-subtitle{
+font-size:17px;
+margin-bottom:20px;
+opacity:.95;
+}
+
+.qr-wrap{
+background:#fff;
+padding:14px;
+border-radius:10px;
+width:min(330px,90%);
+box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+
+.qr-wrap img{
+display:block;
+width:100%;
+height:auto;
+border-radius:5px;
+}
+
+.line-id{
+font-size:30px;
+font-weight:bold;
+margin-top:18px;
+letter-spacing:1px;
+}
+
+.line-note{
+font-size:16px;
+margin-bottom:22px;
+}
+
+.join-box{
+width:100%;
+background:#f3f2df;
+color:#174b39;
+border-radius:12px;
+padding:18px 15px;
+}
+
+.join-box h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.join-steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.step{
+font-size:14px;
+line-height:1.6;
+}
+
+.step-number{
+width:42px;
+height:42px;
+margin:0 auto 8px;
+border-radius:50%;
+background:#1d684d;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:18px;
+}
+
+/* Bottom message */
+.message{
+margin-top:30px;
+background:#fffdf7;
+border:1px solid #e5dfcf;
+border-radius:14px;
+padding:28px 35px;
+text-align:center;
+box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.message h2{
+color:#174b39;
+font-size:24px;
+margin-bottom:8px;
+}
+
+.message p{
+color:#555;
+font-size:17px;
+}
+
+/* Footer */
+footer{
+margin-top:55px;
+background:#214d3b;
+color:#fff;
+padding:22px 30px;
+font-size:14px;
+}
+
+.footer-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+@media(max-width:768px){
+
+.service-time{
+font-size:13px;
+line-height:1.7;
+}
+
+.header-inner{
+flex-direction:column;
+gap:15px;
+}
+
+.logo{
+font-size:32px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px 18px;
+}
+
+nav a{
+font-size:16px;
+}
+
+.hero{
+min-height:240px;
+padding:40px 25px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.info-card,
+.line-card{
+padding:25px;
+}
+
+.join-steps{
+grid-template-columns:1fr;
+gap:14px;
+}
+
+.footer-inner{
+flex-direction:column;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="service-time">
+<span>📢 辦事時間：</span>
+每週三 18:00－21:00　｜　
+每週六 15:00－21:00　｜　
+國定假日休辦
+</div>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">
+元眞道場
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">道場介紹</a></li>
+<li><a href="share.html">心得分享</a></li>
+<li><a href="chaoshan.html">朝山活動</a></li>
+<li><a href="donate.html">捐款專區</a></li>
+<li><a class="active" href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>聯絡我們</h1>
+<p>
+若您有任何問題、建議或想進一步了解道場資訊，<br>
+歡迎透過以下方式與我們聯繫。
+</p>
+</div>
+</section>
+
+<main class="main">
+
+<div class="contact-grid">
+
+<section class="info-card">
+<h2 class="card-title">☘ 聯絡資訊</h2>
+
+<div class="info-item">
+<div class="icon">📍</div>
+<div>
+<h3>會址</h3>
+<p>桃園市中壢區龍岡路三段124巷43號1樓</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">◷</div>
+<div>
+<h3>辦事時間</h3>
+<p>
+每週三 18:00－21:00<br>
+每週六 15:00－21:00<br>
+國定假日休辦
+</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">☎</div>
+<div>
+<h3>道場電話</h3>
+<p>03-4280297</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">✉</div>
+<div>
+<h3>電子信箱</h3>
+<p>yuanjhenyj@gmail.com</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="icon">✦</div>
+<div>
+<h3>服務內容</h3>
+<ul class="service-list">
+<li>修行諮詢與輔導</li>
+<li>心靈關懷與支持</li>
+<li>家庭和諧教育推廣</li>
+<li>公益與慈善活動</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="line-card">
+
+<h2>歡迎加入</h2>
+<div class="line-subtitle">LINE 官方帳號</div>
+
+<p>透過 LINE 與我們聯繫<br>即時獲取道場最新消息與活動資訊！</p>
+
+<div class="qr-wrap">
+<img src="line-qr-corrected.png" alt="元眞道場 LINE QR Code">
+</div>
+
+
+
+<div class="join-box">
+<h3>加入方式</h3>
+<div class="join-steps">
+<div class="step">
+<div class="step-number">1</div>
+開啟 LINE<br>
+點選「加入好友」
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+點選掃描功能<br>
+掃描上方 QR Code
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+加入好友<br>
+開始與我們聯繫
+</div>
+</div>
+</div>
+
+</section>
+
+</div>
+
+<section class="message">
+<h2>您的留言與建議，將幫助我們做得更好！</h2>
+<p>感謝您的支持與信任，願我們一同修行，共同成長。</p>
+</section>
+
+</main>
+
+<footer>
+<div class="footer-inner">
+<div>© 2026 元眞道場｜版權所有</div>
+<div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
+</div>
+</footer>
+
+</body>
+</html>
