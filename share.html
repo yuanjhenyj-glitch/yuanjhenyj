@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>心得分享｜元眞道場</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-font-family:"Microsoft JhengHei",sans-serif;
-background:#f5f5f5;
-color:#333;
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
 }
 
+/* Header */
 header {
     background: linear-gradient(90deg, #7a0000, #b8860b);
     padding: 20px;
@@ -56,84 +57,101 @@ nav a:hover {
     opacity: .7;
 }
 
-.main{
-max-width:1100px;
-margin:50px auto;
-padding:20px;
+/* 辦事時間 */
+.service-time {
+    background: #5b0000;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.page-title{
-text-align:center;
-margin-bottom:15px;
-font-size:42px;
-color:#7a0000;
+.service-time span {
+    color: #ffd76a;
 }
 
-.intro{
-max-width:900px;
-margin:0 auto 50px;
-text-align:center;
-line-height:2;
-color:#666;
+/* Main */
+.main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-max-width:1100px;
-margin:auto;
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    border-left: 6px solid #7a0000;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    color: #7a0000;
 }
 
-.card{
-background:#fff;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
-height:100%;
-display:flex;
-flex-direction:column;
+.intro {
+    background: white;
+    padding: 30px 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    font-size: 18px;
+    line-height: 2;
+    color: #555;
 }
 
-.card:hover{
-transform:translateY(-6px);
+/* 心得卡片 */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
+.card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.card-content{
-padding:20px;
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-.card h2{
-color:#7a0000;
-margin-bottom:15px;
+.card h2 {
+    color: #7a0000;
+    font-size: 23px;
+    margin-bottom: 15px;
 }
 
-.card p{
-line-height:1.8;
-color:#555;
-margin-bottom:20px;
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    flex: 1;
 }
 
-.btn{
-display:inline-block;
-padding:10px 20px;
-background:#7a0000;
-color:#fff;
-text-decoration:none;
-border-radius:5px;
+.btn {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: #7a0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.btn:hover{
-background:#b8860b;
+.btn:hover {
+    background: #b8860b;
 }
 
+/* Footer */
 footer {
     background: #2a2a2a;
     color: white;
@@ -149,176 +167,117 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
-
-.service-time {
-    background: #5b0000;
-    color: white;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.service-time span {
-    color: #ffd76a;
-}
-
-@media(max-width:768px){
-    .footer-inner{
-        flex-direction:column;
-        gap:10px;
-        text-align:center;
-    }
-}
-
 </style>
-
 </head>
 
 <body>
-<div class="service-time">
-  <span>📢 辦事時間：</span>
-  每週三 18:00－21:00　｜　
-  每週六 15:00－21:00　｜　
-  國定假日休辦
-</div>
 
+<div class="service-time">
+    <span>📢 辦事時間：</span>
+    每週三 18:00－21:00　｜　
+    每週六 15:00－21:00　｜　
+    國定假日休辦
+</div>
 
 <header>
+    <div class="header-inner">
+        <div class="logo">元眞道場</div>
 
-<div class="header-inner">
-
-<div class="logo">
-元眞道場
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">首頁</a></li>
-
-<li><a href="about.html">道場介紹</a></li>
-
-<li><a href="share.html">心得分享</a></li>
-
-<li><a href="chaoshan.html">朝山活動</a></li>
-
-<li><a href="donate.html">捐款專區</a></li>
-
-<li><a href="contact.html">聯絡我們</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">道場介紹</a></li>
+                <li><a href="share.html">心得分享</a></li>
+                <li><a href="chaoshan.html">朝山活動</a></li>
+                <li><a href="donate.html">捐款專區</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="main">
+<main class="main">
 
-<h1 class="page-title">
-心得分享
-</h1>
+    <h1 class="page-title">心得分享</h1>
 
-<div class="intro">
+    <div class="intro">
+        每一位踏入元眞道場的同修，都有屬於自己的修行歷程。
+        有人在人生低潮中重新找到方向，
+        有人透過朝山與修持改善家庭關係，
+        也有人在修行中體悟慈悲、感恩與智慧。
+        <br>
+        希望透過這些真實的生命故事，
+        帶給更多有緣人信心與力量。
+    </div>
 
-每一位踏入元眞道場的同修，都有屬於自己的修行歷程。
-有人在人生低潮中重新找到方向，
-有人透過朝山與修持改善家庭關係，
-也有人在修行中體悟慈悲、感恩與智慧。
+    <div class="cards">
 
-希望透過這些真實的生命故事，
-帶給更多有緣人信心與力量。
+        <!-- 卡片1 -->
+        <div class="card">
+            <div class="card-content">
 
-</div>
+                <h2>修行心得──真正要修的，是自己的心</h2>
 
-<div class="cards">
+                <p>
+                    剛接觸修行的時候，我和很多人一樣，以為修行就是到道場、拜拜、誦經、打坐，只要有參與法會、有完成功課，就是在修行。
 
-<!-- 卡片1 -->
-<div class="card">
+                    但是修行了一段時間之後，我慢慢發現，真正困難的，不是誦經，也不是打坐，而是每天面對自己的那顆心。
 
+                    我開始思考：「修行，到底是在修什麼？」
 
+                    後來，我給自己的答案很簡單。
 
-<div class="card-content">
+                    修行，就是修正自己的心與行為。
 
-<h2>修行心得──真正要修的，是自己的心</h2>
+                    也是因為這樣，我開始重新去理解「修心」這兩個字。...
+                </p>
 
-<p>
-剛接觸修行的時候，我和很多人一樣，以為修行就是到道場、拜拜、誦經、打坐，只要有參與法會、有完成功課，就是在修行。
+                <a class="btn" href="share01.html">閱讀全文</a>
 
-但是修行了一段時間之後，我慢慢發現，真正困難的，不是誦經，也不是打坐，而是每天面對自己的那顆心。
+            </div>
+        </div>
 
-我開始思考：「修行，到底是在修什麼？」
+        <!-- 卡片2 -->
+        <div class="card">
+            <div class="card-content">
 
-後來，我給自己的答案很簡單。
+                <h2>朝山讓我學會放下與感恩</h2>
 
-修行，就是修正自己的心與行為。
+                <p>
+                    朝山過程雖然辛苦，但在一步一拜中，
+                    我開始理解人生很多事情其實可以放下……
+                </p>
 
-也是因為這樣，我開始重新去理解「修心」這兩個字。...
-</p>
+                <a class="btn" href="share02.html">閱讀全文</a>
 
-<a class="btn" href="share.html">閱讀全文</a>
+            </div>
+        </div>
 
-</div>
-</div>
+        <!-- 卡片3 -->
+        <div class="card">
+            <div class="card-content">
 
-<!-- 卡片2 -->
-<div class="card">
+                <h2>修行改善了家庭關係</h2>
 
+                <p>
+                    以前與家人常有爭執，但在修行後，
+                    我開始學會溝通與忍讓，家庭氣氛也慢慢變好……
+                </p>
 
-<div class="card-content">
+                <a class="btn" href="share03.html">閱讀全文</a>
 
-<h2>朝山讓我學會放下與感恩</h2>
+            </div>
+        </div>
 
-<p>
-朝山過程雖然辛苦，但在一步一拜中，
-我開始理解人生很多事情其實可以放下……
-</p>
+    </div>
+</main>
 
-<a class="btn" href="share02.html">閱讀全文</a>
-
-</div>
-</div>
-
-<!-- 卡片3 -->
-<div class="card">
-
-
-<div class="card-content">
-
-<h2>修行改善了家庭關係</h2>
-
-<p>
-以前與家人常有爭執，但在修行後，
-我開始學會溝通與忍讓，家庭氣氛也慢慢變好……
-</p>
-
-<a class="btn" href="share03.html">閱讀全文</a>
-
-</div>
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
 <footer>
-  <div class="footer-inner">
-      <div>
-          © 2026 元眞道場 ｜ 版權所有
-      </div>
-
-      <div>
-          會址：桃園市中壢區龍岡路三段124巷43號1樓
-      </div>
-  </div>
+    <div class="footer-inner">
+        <div>© 2026 元眞道場 ｜ 版權所有</div>
+        <div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
+    </div>
 </footer>
-
+
+</body>
 </html>
