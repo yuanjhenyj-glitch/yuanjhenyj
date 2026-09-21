@@ -3,26 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>元眞道場</title>
+<title>朝山活動｜元眞道場</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-font-family:"Microsoft JhengHei",sans-serif;
-background:#f5f5f5;
-color:#333;
-line-height:1.8;
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* 辦事時間 */
+.service-time {
+    background: #5b0000;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-time span {
+    color: #ffd76a;
 }
 
 /* Header */
-
 header {
     background: linear-gradient(90deg, #7a0000, #b8860b);
     padding: 20px;
@@ -59,44 +71,44 @@ nav a {
 nav a:hover {
     opacity: .7;
 }
+
 /* Main */
-
-.main-container{
-max-width:1000px;
-margin:40px auto;
-padding:0 20px;
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.title-section{
-font-size:36px;
-font-weight:bold;
-border-left:6px solid #7a0000;
-padding-left:15px;
-margin-bottom:30px;
-color:#7a0000;
+.title-section {
+    font-size: 36px;
+    font-weight: bold;
+    border-left: 6px solid #7a0000;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    color: #7a0000;
 }
 
-.article{
-background:white;
-padding:35px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.article {
+    background: white;
+    padding: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
-.article img{
-width:100%;
-margin:30px 0;
-border-radius:6px;
-max-height:500px;
-object-fit:cover;
+.article img {
+    width: 100%;
+    display: block;
+    margin: 30px 0;
+    border-radius: 6px;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-.article p{
-font-size:18px;
-margin-bottom:20px;
+.article p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
-    
 footer {
     background: #2a2a2a;
     color: white;
@@ -113,163 +125,142 @@ footer {
     align-items: center;
 }
 
-@media(max-width:768px){
-
-  .footer-inner{
-      flex-direction:column;
-      gap:10px;
-      text-align:center;
-  }
-
-}
-
 /* Mobile */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-@media(max-width:768px){
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
 
-.header-inner{
-flex-direction:column;
-gap:20px;
-}
+    .logo {
+        font-size: 30px;
+    }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
+    .main-container {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
 
-.logo{
-font-size:30px;
-}
+    .title-section {
+        font-size: 28px;
+    }
 
-.title-section{
-font-size:28px;
-}
+    .article {
+        padding: 20px;
+    }
 
-.article{
-padding:20px;
-}
-
-}
-.service-time {
-    background: #5b0000;
-    color: white;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.service-time span {
-    color: #ffd76a;
+    .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
 </style>
-
 </head>
 
 <body>
+
 <div class="service-time">
-  <span>📢 辦事時間：</span>
-  每週三 18:00－21:00　｜　
-  每週六 15:00－21:00　｜　
-  國定假日休辦
+    <span>📢 辦事時間：</span>
+    每週三 18:00－21:00　｜
+    每週六 15:00－21:00　｜
+    國定假日休辦
 </div>
+
 <header>
+    <div class="header-inner">
 
-<div class="header-inner">
+        <div class="logo">元眞道場</div>
 
-<div class="logo">
-元眞道場
-</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">道場介紹</a></li>
+                <li><a href="share.html">心得分享</a></li>
+                <li><a href="chaoshan.html">朝山活動</a></li>
+                <li><a href="donate.html">捐款專區</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
 
-<nav>
-  <ul>
-  <li><a href="index.html">首頁</a></li>
-  <li><a href="about.html">道場介紹</a></li>
-  <li><a href="share.html">心得分享</a></li>
-  <li><a href="chaoshan.html">朝山活動</a></li>
-  <li><a href="donate.html">捐款專區</a></li>
-  <li><a href="contact.html">聯絡我們</a></li>
-  </ul>
-</nav>
-
-</div>
+    </div>
 </header>
 
 <div class="main-container">
 
-<div class="title-section">朝山活動</div>
+    <div class="title-section">朝山活動</div>
 
-<div class="article">
+    <div class="article">
 
-    <img src="chaoshan1.jpg" alt="朝山參拜">
+        <img src="chaoshan1.jpg" alt="朝山參拜">
 
-    <p>
-      朝山活動為本道場重要修持課程之一，透過禮敬天地、感念聖恩、
-      參香禮拜及團體共修，使同修在行持之中學習恭敬、感恩與反省自我，
-      進而提升心性修養與品德涵養。
-    </p>
+        <p>
+            朝山活動為本道場重要修持課程之一，透過禮敬天地、感念聖恩、
+            參香禮拜及團體共修，使同修在行持之中學習恭敬、感恩與反省自我，
+            進而提升心性修養與品德涵養。
+        </p>
 
-    <p>
-      現代人生活步調快速，工作與家庭壓力繁重，
-      容易使身心陷入緊張與焦慮。
-      朝山活動除了是一種宗教禮儀，
-      更是一種沉澱心靈、回歸本性的修行方式。
-      透過虔誠參拜與靜心體悟，
-      讓自己暫時放下煩惱與執著，
-      找回內心的平靜與力量。
-    </p>
+        <p>
+            現代人生活步調快速，工作與家庭壓力繁重，
+            容易使身心陷入緊張與焦慮。
+            朝山活動除了是一種宗教禮儀，
+            更是一種沉澱心靈、回歸本性的修行方式。
+            透過虔誠參拜與靜心體悟，
+            讓自己暫時放下煩惱與執著，
+            找回內心的平靜與力量。
+        </p>
 
-    <img src="chaoshan2.jpg" alt="武嶺朝山活動">
+        <img src="chaoshan2.jpg" alt="武嶺朝山活動">
 
-    <p>
-      道場定期規劃朝山及參訪活動，
-      帶領同修走入名山勝地與宮觀聖境，
-      在親近自然的同時，
-      體悟天地運行之道，
-      學習謙卑、包容與感恩的人生智慧。
-    </p>
+        <p>
+            道場定期規劃朝山及參訪活動，
+            帶領同修走入名山勝地與宮觀聖境，
+            在親近自然的同時，
+            體悟天地運行之道，
+            學習謙卑、包容與感恩的人生智慧。
+        </p>
 
-    <p>
-      每一次朝山都是一次身心靈的洗禮，
-      同修們在活動過程中互相扶持、彼此鼓勵，
-      不僅增進修行道誼，
-      也建立正向積極的人生態度。
-    </p>
+        <p>
+            每一次朝山都是一次身心靈的洗禮，
+            同修們在活動過程中互相扶持、彼此鼓勵，
+            不僅增進修行道誼，
+            也建立正向積極的人生態度。
+        </p>
 
-    <img src="chaoshan3.jpg" alt="朝山活動合照">
+        <img src="chaoshan3.jpg" alt="朝山活動合照">
 
-    <p>
-      朝山不只是身體的行腳，
-      更是心靈的修行。
-      我們希望透過每一次活動，
-      引導有緣大眾學習正信修行理念，
-      培養慈悲心、責任心與服務精神，
-      並將所學實踐於家庭、職場及社會之中。
-    </p>
+        <p>
+            朝山不只是身體的行腳，
+            更是心靈的修行。
+            我們希望透過每一次活動，
+            引導有緣大眾學習正信修行理念，
+            培養慈悲心、責任心與服務精神，
+            並將所學實踐於家庭、職場及社會之中。
+        </p>
 
-    <p>
-      願所有參與朝山活動的同修，
-      都能在修持過程中淨化身心，
-      啟發智慧，
-      以更光明正向的心境面對人生，
-      並將善的力量傳遞給更多需要幫助的人。
-    </p>
+        <p>
+            願所有參與朝山活動的同修，
+            都能在修持過程中淨化身心，
+            啟發智慧，
+            以更光明正向的心境面對人生，
+            並將善的力量傳遞給更多需要幫助的人。
+        </p>
 
-</div>
-
+    </div>
 </div>
 
 <footer>
-  <div class="footer-inner">
-      <div>
-          © 2026 元眞道場 ｜ 版權所有
-      </div>
-
-      <div>
-          會址：桃園市中壢區龍岡路三段124巷43號1樓
-      </div>
-  </div>
+    <div class="footer-inner">
+        <div>© 2026 元眞道場 ｜ 版權所有</div>
+        <div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
+    </div>
 </footer>
+
 </body>
 </html>
