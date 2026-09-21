@@ -1,189 +1,232 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>心得分享｜修行讓我重新找回人生方向</title>
 
 <style>
-
-body{
-font-family:"Microsoft JhengHei",sans-serif;
-margin:0;
-background:#f5f5f5;
-color:#333;
-line-height:1.8;
+* {
+    box-sizing: border-box;
 }
 
-/* Header */
-header{
-background:linear-gradient(90deg,#7a0000,#b8860b);
-padding:20px;
-color:#fff;
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
 }
 
-.header-inner{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
+/* 頁首 */
+header {
+    background: linear-gradient(90deg, #7a0000, #b8860b);
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:18px;
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:bold;
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Content */
-.container{
-max-width:900px;
-margin:50px auto;
-background:#fff;
-padding:30px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-h1{
-color:#7a0000;
-margin-bottom:20px;
+nav a:hover {
+    opacity: .7;
 }
 
-img{
-width:100%;
-border-radius:8px;
-margin-bottom:20px;
+/* 辦事時間 */
+.service-time {
+    background: #5b0000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.meta{
-color:#888;
-font-size:14px;
-margin-bottom:20px;
+.service-time span {
+    color: #ffd76a;
 }
 
-/* Footer */
-footer{
-text-align:center;
-padding:20px;
-margin-top:50px;
-background:#2a2a2a;
-color:#fff;
+/* 文章內容 */
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.service-time{
-    background:#5b0000;
-    color:#fff;
-    text-align:center;
-    padding:10px 15px;
-    font-size:15px;
-    font-weight:600;
-    letter-spacing:1px;
+.title-section {
+    font-size: 36px;
+    font-weight: bold;
+    border-left: 6px solid #7a0000;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    color: #7a0000;
 }
 
-.service-time span{
-    color:#ffd76a;
+.article {
+    background: #fff;
+    padding: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.article h1 {
+    color: #7a0000;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-@media(max-width:768px){
-    .footer-inner{
-        flex-direction:column;
-        gap:10px;
-        text-align:center;
+.article p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* 頁尾 */
+footer {
+    background: #2a2a2a;
+    color: #fff;
+    padding: 22px 30px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 手機版排版 */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .title-section {
+        font-size: 28px;
+    }
+
+    .article {
+        padding: 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 }
-
 </style>
-
 </head>
 
 <body>
-<div class="service-time">
-  <span>📢 辦事時間：</span>
-  每週三 18:00－21:00　｜　
-  每週六 15:00－21:00　｜　
-  國定假日休辦
-</div>
 
+<div class="service-time">
+    <span>📢 辦事時間：</span>
+    每週三 18:00－21:00　｜　
+    每週六 15:00－21:00　｜　
+    國定假日休辦
+</div>
 
 <header>
+    <div class="header-inner">
+        <div class="logo">元眞道場</div>
 
-<div class="header-inner">
-
-<div class="logo">元眞道場</div>
-
-<nav>
-<ul>
-<li><a href="index.html">首頁</a></li>
-<li><a href="about.html">道場介紹</a></li>
-<li><a href="share.html">心得分享</a></li>
-<li><a href="chaoshan.html">朝山活動</a></li>
-<li><a href="donate.html">捐款專區</a></li>
-<li><a href="contact.html">聯絡我們</a></li>
-</ul>
-</nav>
-
-</div>
-
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">道場介紹</a></li>
+                <li><a href="share.html">心得分享</a></li>
+                <li><a href="chaoshan.html">朝山活動</a></li>
+                <li><a href="donate.html">捐款專區</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
+<main class="main-container">
+    <div class="title-section">心得分享</div>
 
-<h1>修行改善家庭關係</h1>
+    <article class="article">
+        <h1>修行改善家庭關係</h1>
 
-<div class="meta">
-分享者：王○○ ｜ 2026-07-15 ｜ 修行心得
-</div>
+        <div class="meta">
+            分享者：王○○ ｜ 2026-07-15 ｜ 修行心得
+        </div>
 
+        <p>
+            剛開始接觸元眞道場時，只是抱著試試看的心態。
+            沒想到在一次次的朝山與修持中，
+            我慢慢開始反省自己過去的行為與想法。
+        </p>
 
-<p>
-剛開始接觸元眞道場時，只是抱著試試看的心態。
-沒想到在一次次的朝山與修持中，
-我慢慢開始反省自己過去的行為與想法。
-</p>
+        <p>
+            以前我遇到問題總是抱怨環境，
+            但現在我開始學會先檢討自己，
+            這讓我的人生有了很大的轉變。
+        </p>
 
-<p>
-以前我遇到問題總是抱怨環境，
-但現在我開始學會先檢討自己，
-這讓我的人生有了很大的轉變。
-</p>
+        <p>
+            現在的我，家庭關係也改善很多，
+            內心也比以前更安定。
+        </p>
+    </article>
+</main>
 
-<p>
-現在的我，家庭關係也改善很多，
-內心也比以前更安定。
-</p>
-
-</div>
 <footer>
-  <div class="footer-inner">
-      <div>
-          © 2026 元眞道場 ｜ 版權所有
-      </div>
-
-      <div>
-          會址：桃園市中壢區龍岡路三段124巷43號1樓
-      </div>
-  </div>
+    <div class="footer-inner">
+        <div>© 2026 元眞道場 ｜ 版權所有</div>
+        <div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
+    </div>
 </footer>
-
+
+</body>
 </html>
