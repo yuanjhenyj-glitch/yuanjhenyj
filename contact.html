@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -208,13 +207,38 @@ nav a.active{
   word-break:break-word;
 }
 
+/* 服務內容 */
+.service-item{
+  align-items:flex-start;
+}
+
+.service-content{
+  flex:1;
+}
+
 .service-list{
-  margin:5px 0 0 20px;
-  padding-left:18px;
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px 12px;
+  margin:12px 0 0;
+  padding:0;
 }
 
 .service-list li{
-  margin-bottom:3px;
+  background:#faf7f0;
+  border-left:3px solid #b8860b;
+  border-radius:5px;
+  padding:7px 10px;
+  color:#555;
+  font-size:15px;
+  line-height:1.5;
+  transition:.2s;
+}
+
+.service-list li:hover{
+  background:#f5ead2;
+  transform:translateX(2px);
 }
 
 /* LINE */
@@ -326,6 +350,7 @@ footer{
 
 /* Mobile */
 @media(max-width:768px){
+
   .service-time{
     font-size:13px;
     line-height:1.7;
@@ -372,6 +397,11 @@ footer{
     padding:25px;
   }
 
+  /* 手機版服務內容改為單欄 */
+  .service-list{
+    grid-template-columns:1fr;
+  }
+
   .join-steps{
     grid-template-columns:1fr;
     gap:14px;
@@ -387,7 +417,7 @@ footer{
 
 <body>
 
-<!-- 辦事時間放在導覽列上方，與首頁一致 -->
+<!-- 辦事時間 -->
 <div class="service-time">
   <span>📢 辦事時間：</span>
   每週三 18:00－21:00　｜　
@@ -474,27 +504,30 @@ footer{
         </div>
       </div>
 
-      <div class="info-item">
+      <!-- 服務內容 -->
+      <div class="info-item service-item">
         <div class="icon">✦</div>
-        <div>
-         <h3>服務內容</h3>
 
-<ul class="service-list">
-    <li>修行諮詢與輔導</li>
-    <li>心靈關懷與支持</li>
-    <li>家庭和諧教育推廣</li>
-    <li>公益與慈善活動</li>
-    <li>家宅</li>
-    <li>運勢</li>
-    <li>婚姻</li>
-    <li>事業</li>
-    <li>身體</li>
-    <li>問事</li>
-    <li>收驚</li>
-    <li>祭改</li>
-    <li>點燈</li>
-    <li>安太歲</li>
-</ul>
+        <div class="service-content">
+          <h3>服務內容</h3>
+
+          <ul class="service-list">
+            <li>修行諮詢與輔導</li>
+            <li>心靈關懷與支持</li>
+            <li>家庭和諧教育推廣</li>
+            <li>公益與慈善活動</li>
+            <li>家宅</li>
+            <li>運勢</li>
+            <li>婚姻</li>
+            <li>事業</li>
+            <li>身體</li>
+            <li>問事</li>
+            <li>收驚</li>
+            <li>祭改</li>
+            <li>點燈</li>
+            <li>安太歲</li>
+          </ul>
+
         </div>
       </div>
 
