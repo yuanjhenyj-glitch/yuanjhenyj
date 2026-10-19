@@ -3,38 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>朝山活動｜元眞道場</title>
+
+<title>元眞道場</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-    font-family: "Microsoft JhengHei", sans-serif;
-    background: #f5f5f5;
-    color: #333;
-    line-height: 1.8;
-}
-
-/* 辦事時間 */
-.service-time {
-    background: #5b0000;
-    color: white;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.service-time span {
-    color: #ffd76a;
+body{
+font-family:"Microsoft JhengHei",sans-serif;
+background:#f5f5f5;
+color:#333;
+line-height:1.8;
 }
 
 /* Header */
+
 header {
     background: linear-gradient(90deg, #7a0000, #b8860b);
     padding: 20px;
@@ -71,44 +59,44 @@ nav a {
 nav a:hover {
     opacity: .7;
 }
-
 /* Main */
-.main-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+
+.main-container{
+max-width:1000px;
+margin:40px auto;
+padding:0 20px;
 }
 
-.title-section {
-    font-size: 36px;
-    font-weight: bold;
-    border-left: 6px solid #7a0000;
-    padding-left: 15px;
-    margin-bottom: 30px;
-    color: #7a0000;
+.title-section{
+font-size:36px;
+font-weight:bold;
+border-left:6px solid #7a0000;
+padding-left:15px;
+margin-bottom:30px;
+color:#7a0000;
 }
 
-.article {
-    background: white;
-    padding: 35px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+.article{
+background:white;
+padding:35px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.article img {
-    width: 100%;
-    display: block;
-    margin: 30px 0;
-    border-radius: 6px;
-    max-height: 500px;
-    object-fit: cover;
+.article img{
+width:100%;
+margin:30px 0;
+border-radius:6px;
+max-height:500px;
+object-fit:cover;
 }
 
-.article p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.article p{
+font-size:18px;
+margin-bottom:20px;
 }
 
 /* Footer */
+    
 footer {
     background: #2a2a2a;
     color: white;
@@ -125,142 +113,241 @@ footer {
     align-items: center;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .header-inner {
-        flex-direction: column;
-        gap: 20px;
-    }
+@media(max-width:768px){
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 18px;
-    }
+  .footer-inner{
+      flex-direction:column;
+      gap:10px;
+      text-align:center;
+  }
 
-    .logo {
-        font-size: 30px;
-    }
-
-    .main-container {
-        margin: 25px auto;
-        padding: 0 12px;
-    }
-
-    .title-section {
-        font-size: 28px;
-    }
-
-    .article {
-        padding: 20px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
 }
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.header-inner{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo{
+font-size:30px;
+}
+
+.title-section{
+font-size:28px;
+}
+
+.article{
+padding:20px;
+}
+
+}
+.service-time {
+    background: #5b0000;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-time span {
+    color: #ffd76a;
+}
+
+
+/* 手機版排版補強：只在 768px 以下生效，電腦版既有 CSS 不變 */
+@media screen and (max-width: 768px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-wrap: anywhere; }
+  img, video, iframe { max-width: 100%; }
+
+  header .header-inner {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+  header .logo {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.35;
+  }
+  nav { width: 100%; }
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    gap: 6px;
+  }
+  nav li { min-width: 0; }
+  nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 8px 4px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .main-container, .main, .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 24px auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .title-section { font-size: 28px; line-height: 1.45; }
+  .page-title { font-size: clamp(28px, 7vw, 36px); line-height: 1.4; }
+  .article, .card, .card-content, .contact-card, .donation-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .article { padding: 18px; }
+  .article img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
+  .article p { font-size: 16px; line-height: 1.9; }
+  .cards { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .card img { width: 100%; height: auto; max-height: 260px; object-fit: cover; }
+  .hero { min-height: 0; padding: 30px 18px; }
+  .contact-grid, .info-grid, .donation-grid, .service-grid { grid-template-columns: minmax(0, 1fr); }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  input, select, textarea, button { max-width: 100%; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; }
+  footer { padding: 20px 16px; }
+}
+
+@media screen and (max-width: 380px) {
+  header .header-inner { padding-left: 12px; padding-right: 12px; }
+  nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .main-container, .main, .container { padding-left: 12px; padding-right: 12px; }
+  .article { padding: 14px; }
+  .service-time { font-size: 12px; letter-spacing: 0; line-height: 1.7; }
+}
+
 </style>
+
 </head>
 
 <body>
-
 <div class="service-time">
   <span>📢 辦事時間：</span>
   每週三 18:00－21:00　｜　
   每週六 15:00－21:00　｜　
   國定假日休辦
 </div>
-
 <header>
-    <div class="header-inner">
 
-        <div class="logo">元眞道場</div>
+<div class="header-inner">
 
-        <nav>
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="about.html">道場介紹</a></li>
-                <li><a href="share.html">心得分享</a></li>
-                <li><a href="chaoshan.html">朝山活動</a></li>
-                <li><a href="donate.html">捐款專區</a></li>
-                <li><a href="contact.html">聯絡我們</a></li>
-            </ul>
-        </nav>
+<div class="logo">
+元眞道場
+</div>
 
-    </div>
+<nav>
+  <ul>
+  <li><a href="index.html">首頁</a></li>
+  <li><a href="about.html">道場介紹</a></li>
+  <li><a href="share.html">心得分享</a></li>
+  <li><a href="chaoshan.html">朝山活動</a></li>
+  <li><a href="donate.html">捐款專區</a></li>
+  <li><a href="contact.html">聯絡我們</a></li>
+  </ul>
+</nav>
+
+</div>
 </header>
 
 <div class="main-container">
 
-    <div class="title-section">朝山活動</div>
+<div class="title-section">朝山活動</div>
 
-    <div class="article">
+<div class="article">
 
-        <img src="chaoshan1.jpg" alt="朝山參拜">
+    <img src="chaoshan1.jpg" alt="朝山參拜">
 
-        <p>
-            朝山活動為本道場重要修持課程之一，透過禮敬天地、感念聖恩、
-            參香禮拜及團體共修，使同修在行持之中學習恭敬、感恩與反省自我，
-            進而提升心性修養與品德涵養。
-        </p>
+    <p>
+      朝山活動為本道場重要修持課程之一，透過禮敬天地、感念聖恩、
+      參香禮拜及團體共修，使同修在行持之中學習恭敬、感恩與反省自我，
+      進而提升心性修養與品德涵養。
+    </p>
 
-        <p>
-            現代人生活步調快速，工作與家庭壓力繁重，
-            容易使身心陷入緊張與焦慮。
-            朝山活動除了是一種宗教禮儀，
-            更是一種沉澱心靈、回歸本性的修行方式。
-            透過虔誠參拜與靜心體悟，
-            讓自己暫時放下煩惱與執著，
-            找回內心的平靜與力量。
-        </p>
+    <p>
+      現代人生活步調快速，工作與家庭壓力繁重，
+      容易使身心陷入緊張與焦慮。
+      朝山活動除了是一種宗教禮儀，
+      更是一種沉澱心靈、回歸本性的修行方式。
+      透過虔誠參拜與靜心體悟，
+      讓自己暫時放下煩惱與執著，
+      找回內心的平靜與力量。
+    </p>
 
-        <img src="chaoshan2.jpg" alt="武嶺朝山活動">
+    <img src="chaoshan2.jpg" alt="武嶺朝山活動">
 
-        <p>
-            道場定期規劃朝山及參訪活動，
-            帶領同修走入名山勝地與宮觀聖境，
-            在親近自然的同時，
-            體悟天地運行之道，
-            學習謙卑、包容與感恩的人生智慧。
-        </p>
+    <p>
+      道場定期規劃朝山及參訪活動，
+      帶領同修走入名山勝地與宮觀聖境，
+      在親近自然的同時，
+      體悟天地運行之道，
+      學習謙卑、包容與感恩的人生智慧。
+    </p>
 
-        <p>
-            每一次朝山都是一次身心靈的洗禮，
-            同修們在活動過程中互相扶持、彼此鼓勵，
-            不僅增進修行道誼，
-            也建立正向積極的人生態度。
-        </p>
+    <p>
+      每一次朝山都是一次身心靈的洗禮，
+      同修們在活動過程中互相扶持、彼此鼓勵，
+      不僅增進修行道誼，
+      也建立正向積極的人生態度。
+    </p>
 
-        <img src="chaoshan3.jpg" alt="朝山活動合照">
+    <img src="chaoshan3.jpg" alt="朝山活動合照">
 
-        <p>
-            朝山不只是身體的行腳，
-            更是心靈的修行。
-            我們希望透過每一次活動，
-            引導有緣大眾學習正信修行理念，
-            培養慈悲心、責任心與服務精神，
-            並將所學實踐於家庭、職場及社會之中。
-        </p>
+    <p>
+      朝山不只是身體的行腳，
+      更是心靈的修行。
+      我們希望透過每一次活動，
+      引導有緣大眾學習正信修行理念，
+      培養慈悲心、責任心與服務精神，
+      並將所學實踐於家庭、職場及社會之中。
+    </p>
 
-        <p>
-            願所有參與朝山活動的同修，
-            都能在修持過程中淨化身心，
-            啟發智慧，
-            以更光明正向的心境面對人生，
-            並將善的力量傳遞給更多需要幫助的人。
-        </p>
+    <p>
+      願所有參與朝山活動的同修，
+      都能在修持過程中淨化身心，
+      啟發智慧，
+      以更光明正向的心境面對人生，
+      並將善的力量傳遞給更多需要幫助的人。
+    </p>
 
-    </div>
+</div>
+
 </div>
 
 <footer>
-    <div class="footer-inner">
-        <div>© 2026 元眞道場 ｜ 版權所有</div>
-        <div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
-    </div>
-</footer>
+  <div class="footer-inner">
+      <div>
+          © 2026 元眞道場 ｜ 版權所有
+      </div>
 
+      <div>
+          會址：桃園市中壢區龍岡路三段124巷43號1樓
+      </div>
+  </div>
+</footer>
 </body>
 </html>
