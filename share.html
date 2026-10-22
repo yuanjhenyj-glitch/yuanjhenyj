@@ -167,6 +167,103 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+
+/* 手機版：與網站其他頁面統一，僅在窄螢幕生效 */
+@media screen and (max-width: 768px) {
+    html { -webkit-text-size-adjust: 100%; }
+    body { overflow-wrap: anywhere; }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.35;
+    }
+
+    nav { width: 100%; }
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 6px;
+    }
+
+    nav li { min-width: 0; }
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 8px 4px;
+        border: 1px solid rgba(255,255,255,.28);
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .service-time {
+        padding: 9px 12px;
+        font-size: 13px;
+        line-height: 1.7;
+        letter-spacing: 0;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 100%;
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .page-title {
+        font-size: 28px;
+        line-height: 1.45;
+        margin-bottom: 22px;
+    }
+
+    .intro {
+        padding: 20px 18px;
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 1.9;
+        overflow-wrap: anywhere;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .card { min-width: 0; }
+    .card-content { padding: 20px 18px; }
+    .card h2 { font-size: 20px; line-height: 1.6; }
+    .card p { font-size: 16px; line-height: 1.9; }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
+    }
+
+    footer { padding: 20px 16px; }
+}
+
+@media screen and (max-width: 380px) {
+    nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .main { padding-left: 12px; padding-right: 12px; }
+    .intro { padding: 16px 14px; }
+    .card-content { padding: 16px 14px; }
+    .service-time { font-size: 12px; line-height: 1.7; }
+}
 </style>
 </head>
 
@@ -215,9 +312,7 @@ footer {
         <!-- 卡片1 -->
         <div class="card">
             <div class="card-content">
-
                 <h2>修行心得──真正要修的，是自己的心</h2>
-
                 <p>
                     剛接觸修行的時候，我和很多人一樣，以為修行就是到道場、拜拜、誦經、打坐，只要有參與法會、有完成功課，就是在修行。
 
@@ -231,41 +326,31 @@ footer {
 
                     也是因為這樣，我開始重新去理解「修心」這兩個字。...
                 </p>
-
                 <a class="btn" href="share01.html">閱讀全文</a>
-
             </div>
         </div>
 
         <!-- 卡片2 -->
         <div class="card">
             <div class="card-content">
-
                 <h2>朝山讓我學會放下與感恩</h2>
-
                 <p>
                     朝山過程雖然辛苦，但在一步一拜中，
                     我開始理解人生很多事情其實可以放下……
                 </p>
-
                 <a class="btn" href="share02.html">閱讀全文</a>
-
             </div>
         </div>
 
         <!-- 卡片3 -->
         <div class="card">
             <div class="card-content">
-
                 <h2>修行改善了家庭關係</h2>
-
                 <p>
                     以前與家人常有爭執，但在修行後，
                     我開始學會溝通與忍讓，家庭氣氛也慢慢變好……
                 </p>
-
                 <a class="btn" href="share03.html">閱讀全文</a>
-
             </div>
         </div>
 
