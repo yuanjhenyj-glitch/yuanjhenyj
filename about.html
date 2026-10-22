@@ -388,6 +388,85 @@
     .purpose-item, .feature-card, .deity-box { padding: 16px; }
   }
   </style>
+
+  <!-- 共用手機版格式：只覆蓋 768px 以下，不更動桌面版樣式與原文 -->
+  <style>
+    @media screen and (max-width: 768px) {
+      html { -webkit-text-size-adjust: 100%; }
+      body { overflow-wrap: anywhere; }
+      header .header-inner {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px;
+      }
+      header .logo {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.35;
+        white-space: normal;
+      }
+      nav { width: 100%; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        gap: 6px;
+      }
+      nav li { min-width: 0; }
+      nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 8px 4px;
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+      }
+      .service-time {
+        padding: 9px 12px;
+        font-size: 12px;
+        line-height: 1.7;
+        letter-spacing: 0;
+      }
+      .main-container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .article { min-width: 0; overflow-wrap: anywhere; }
+      .article img, .deity-box img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      .purpose-box, .feature-grid { grid-template-columns: minmax(0, 1fr); }
+      .purpose-item, .feature-card, .deity-box { min-width: 0; }
+      .sanqing-divider { max-width: 100%; }
+      .footer-inner {
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+      footer { padding: 20px 16px; }
+    }
+    @media screen and (max-width: 380px) {
+      nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .main-container { padding-left: 12px; padding-right: 12px; }
+      .article { padding: 15px; }
+      .purpose-item, .feature-card, .deity-box { padding: 16px; }
+    }
+  </style>
+
 </head>
 
 <body>
