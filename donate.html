@@ -270,130 +270,142 @@ footer {
     align-items: center;
 }
 
-/* Mobile */
-@media(max-width:768px){
-    .header-inner{
-        flex-direction:column;
-        gap:20px;
+/* 共用頁首與頁尾：與其他頁面統一 */
+.header-inner {
+    gap: 20px;
+}
+
+.logo {
+    white-space: nowrap;
+}
+
+nav ul {
+    flex-wrap: wrap;
+}
+
+.footer-inner {
+    gap: 15px;
+}
+
+/* Mobile：統一手機版頁首、辦事時間、頁尾，桌面版不受影響 */
+@media (max-width: 768px) {
+    .service-time {
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 1.8;
+        padding: 10px 12px;
     }
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px 18px;
+    header .header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .logo{
-        font-size:30px;
+    .logo {
+        font-size: 30px;
+        text-align: center;
     }
 
-    .main-container{
-        margin:25px auto;
-        padding:0 12px;
+    nav {
+        width: 100%;
     }
 
-    .title-section{
-        font-size:28px;
+    nav ul {
+        justify-content: center;
+        gap: 12px 18px;
     }
 
-    .article{
-        padding:18px;
+    nav a {
+        font-size: 16px;
     }
 
-    .donation-options{
-        grid-template-columns:1fr;
+    .main-container {
+        width: 100%;
+        margin: 25px auto;
+        padding: 0 12px;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
+    .title-section {
+        font-size: 28px;
+        line-height: 1.45;
     }
 
-    .donation-banner img{
-        border-radius:5px;
+    .article {
+        padding: 18px;
     }
 
-    .footer-inner{
-        flex-direction:column;
-        gap:10px;
-        text-align:center;
+    .donation-options,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-banner img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .intro h2 {
+        font-size: 24px;
+    }
+
+    .intro p,
+    .single-donation p,
+    .info-box p,
+    .ecpay-box p,
+    .notice p {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .donation-card {
+        min-width: 0;
+        padding: 24px 16px;
+    }
+
+    .donate-button {
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.5;
+    }
+
+    .ecpay-box,
+    .notice,
+    .info-box {
+        padding: 18px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 22px 16px;
     }
 }
 
+@media (max-width: 380px) {
+    .service-time {
+        font-size: 12px;
+        line-height: 1.7;
+    }
 
-/* 手機版排版補強：只在 768px 以下生效，電腦版既有 CSS 不變 */
-@media screen and (max-width: 768px) {
-  html { -webkit-text-size-adjust: 100%; }
-  body { overflow-wrap: anywhere; }
-  img, video, iframe { max-width: 100%; }
+    nav ul {
+        gap: 10px 14px;
+    }
 
-  header .header-inner {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-    padding: 16px;
-  }
-  header .logo {
-    text-align: center;
-    font-size: 30px;
-    line-height: 1.35;
-  }
-  nav { width: 100%; }
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: stretch;
-    align-items: stretch;
-    width: 100%;
-    gap: 6px;
-  }
-  nav li { min-width: 0; }
-  nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 42px;
-    padding: 8px 4px;
-    border: 1px solid rgba(255,255,255,.28);
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: center;
-  }
+    .article {
+        padding: 14px;
+    }
 
-  .main-container, .main, .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 24px auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .title-section { font-size: 28px; line-height: 1.45; }
-  .page-title { font-size: clamp(28px, 7vw, 36px); line-height: 1.4; }
-  .article, .card, .card-content, .contact-card, .donation-card {
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-  .article { padding: 18px; }
-  .article img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
-  .article p { font-size: 16px; line-height: 1.9; }
-  .cards { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  .card img { width: 100%; height: auto; max-height: 260px; object-fit: cover; }
-  .hero { min-height: 0; padding: 30px 18px; }
-  .contact-grid, .info-grid, .donation-grid, .service-grid { grid-template-columns: minmax(0, 1fr); }
-  table { display: block; max-width: 100%; overflow-x: auto; }
-  input, select, textarea, button { max-width: 100%; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; }
-  footer { padding: 20px 16px; }
-}
-
-@media screen and (max-width: 380px) {
-  header .header-inner { padding-left: 12px; padding-right: 12px; }
-  nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .main-container, .main, .container { padding-left: 12px; padding-right: 12px; }
-  .article { padding: 14px; }
-  .service-time { font-size: 12px; letter-spacing: 0; line-height: 1.7; }
+    .donate-button {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
 }
 
 </style>
