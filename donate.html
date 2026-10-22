@@ -74,7 +74,7 @@ nav a:hover {
 
 /* Main */
 .main-container{
-    max-width:1100px;
+    max-width:1000px;
     margin:40px auto;
     padding:0 20px;
 }
@@ -270,144 +270,107 @@ footer {
     align-items: center;
 }
 
-/* 共用頁首與頁尾：與其他頁面統一 */
-.header-inner {
-    gap: 20px;
-}
+/* 手機版：與網站其他頁面統一；桌面版沿用首頁設定 */
+@media screen and (max-width: 768px) {
+    html { -webkit-text-size-adjust: 100%; }
+    body { overflow-wrap: anywhere; }
+    img, video, iframe { max-width: 100%; }
 
-.logo {
-    white-space: nowrap;
-}
-
-nav ul {
-    flex-wrap: wrap;
-}
-
-.footer-inner {
-    gap: 15px;
-}
-
-/* Mobile：統一手機版頁首、辦事時間、頁尾，桌面版不受影響 */
-@media (max-width: 768px) {
     .service-time {
         font-size: 13px;
+        line-height: 1.7;
         letter-spacing: 0;
-        line-height: 1.8;
-        padding: 10px 12px;
+        padding: 9px 12px;
     }
 
-    header .header-inner {
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px;
     }
 
     .logo {
         font-size: 30px;
+        line-height: 1.35;
         text-align: center;
     }
 
-    nav {
-        width: 100%;
-    }
-
+    nav { width: 100%; }
     nav ul {
-        justify-content: center;
-        gap: 12px 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 6px;
     }
-
+    nav li { min-width: 0; }
     nav a {
-        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 8px 4px;
+        border: 1px solid rgba(255,255,255,.28);
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
     }
 
     .main-container {
         width: 100%;
+        max-width: 1000px;
         margin: 25px auto;
-        padding: 0 12px;
+        padding: 0 16px;
     }
 
     .title-section {
         font-size: 28px;
         line-height: 1.45;
+        margin-bottom: 20px;
     }
 
-    .article {
-        padding: 18px;
-    }
-
-    .donation-options,
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .article { padding: 18px; }
+    .donation-options, .info-grid { grid-template-columns: minmax(0, 1fr); }
     .donation-banner img {
+        display: block;
         width: 100%;
         height: auto;
         border-radius: 5px;
     }
-
-    .intro h2 {
-        font-size: 24px;
-    }
-
-    .intro p,
-    .single-donation p,
-    .info-box p,
-    .ecpay-box p,
-    .notice p {
+    .intro h2 { font-size: 24px; }
+    .intro p, .single-donation p, .info-box p, .ecpay-box p, .notice p {
         font-size: 16px;
+        line-height: 1.9;
         overflow-wrap: anywhere;
     }
-
-    .donation-card {
-        min-width: 0;
-        padding: 24px 16px;
-    }
-
+    .donation-card { min-width: 0; padding: 24px 16px; }
     .donate-button {
         max-width: 100%;
         white-space: normal;
         line-height: 1.5;
     }
+    .ecpay-box, .notice, .info-box { padding: 18px; }
 
-    .ecpay-box,
-    .notice,
-    .info-box {
-        padding: 18px;
-    }
-
+    footer { padding: 20px 16px; }
     .footer-inner {
         flex-direction: column;
         align-items: center;
         gap: 10px;
         text-align: center;
     }
-
-    footer {
-        padding: 22px 16px;
-    }
 }
 
-@media (max-width: 380px) {
-    .service-time {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    nav ul {
-        gap: 10px 14px;
-    }
-
-    .article {
-        padding: 14px;
-    }
-
-    .donate-button {
-        padding: 10px 14px;
-        font-size: 15px;
-    }
+@media screen and (max-width: 380px) {
+    .header-inner { padding-left: 12px; padding-right: 12px; }
+    nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .main-container { padding-left: 12px; padding-right: 12px; }
+    .article { padding: 14px; }
+    .service-time { font-size: 12px; line-height: 1.7; }
+    .donate-button { padding: 10px 14px; font-size: 15px; }
 }
-
 </style>
 </head>
 
