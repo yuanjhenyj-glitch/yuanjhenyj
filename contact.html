@@ -5,396 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>聯絡我們｜中壢元眞道場</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-body{
-font-family:"Microsoft JhengHei",sans-serif;
-background:#f5f5f5;
-color:#333;
-line-height:1.8;
-}
-/* Header - 完全以 index.html 為準 */
-header{
-background:linear-gradient(90deg,#7a0000,#b8860b);
-padding:20px;
-color:white;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
-}
-.header-inner{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-.logo{
-font-size:38px;
-font-weight:bold;
-}
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-nav a{
-color:white;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft JhengHei",sans-serif;background:#f5f5f5;color:#333;line-height:1.8;}
+/* Header */
+header{background:linear-gradient(90deg,#7a0000,#b8860b);padding:20px;color:white;box-shadow:0 2px 10px rgba(0,0,0,.2);}
+.header-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:38px;font-weight:bold;}
+nav ul{display:flex;list-style:none;gap:25px;}
+nav a{color:white;text-decoration:none;font-size:18px;font-weight:bold;}
 nav a:hover{opacity:.7;}
 nav a.active{text-decoration:underline;text-underline-offset:6px;}
-/* 辦事時間條 - 與首頁一致 */
-.service-time{
-    background:#5b0000;
-    color:#fff;
-    text-align:center;
-    padding:10px 15px;
-    font-size:15px;
-    font-weight:600;
-    letter-spacing:1px;
-}
+/* 辦事時間 */
+.service-time{background:#5b0000;color:#fff;text-align:center;padding:10px 15px;font-size:15px;font-weight:600;letter-spacing:1px;}
 .service-time span{color:#ffd76a;}
-
-/* Hero - 改成紅金，不再是綠色 */
-.hero{
-max-width:1200px;
-margin:0 auto;
-min-height:300px;
-display:flex;
-align-items:center;
-padding:55px 55px;
-background:
-linear-gradient(90deg,rgba(255,248,230,.97) 0%,rgba(255,248,230,.85) 45%,rgba(255,248,230,.20) 100%),
-linear-gradient(135deg,#f9e8b8,#fdf8f0);
-position:relative;
-overflow:hidden;
-}
-.hero:after{
-content:"";
-position:absolute;
-right:-80px;
-top:-100px;
-width:500px;
-height:500px;
-background:radial-gradient(circle,rgba(122,0,0,.12),transparent 68%);
-}
-.hero-content{
-position:relative;
-z-index:1;
-max-width:600px;
-border-left:5px solid #7a0000;
-padding-left:22px;
-}
+/* Hero */
+.hero{max-width:1200px;margin:0 auto;min-height:300px;display:flex;align-items:center;padding:55px;background:linear-gradient(90deg,rgba(255,248,230,.97) 0%,rgba(255,248,230,.85) 45%,rgba(255,248,230,.20) 100%),linear-gradient(135deg,#f9e8b8,#fdf8f0);position:relative;overflow:hidden;}
+.hero:after{content:"";position:absolute;right:-80px;top:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(122,0,0,.12),transparent 68%);}
+.hero-content{position:relative;z-index:1;max-width:600px;border-left:5px solid #7a0000;padding-left:22px;}
 .hero h1{font-size:48px;color:#7a0000;margin-bottom:15px;}
 .hero p{font-size:19px;color:#555;}
-
 .main{max-width:1100px;margin:45px auto;padding:0 20px;}
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-align-items:stretch;
-}
-.info-card,
-.line-card{
-border-radius:14px;
-overflow:hidden;
-box-shadow:0 5px 18px rgba(0,0,0,.10);
-}
-.info-card{
-background:#fff;
-padding:35px;
-}
-.line-card{
-background:linear-gradient(145deg,#7a0000,#9a1a1a);
-color:#fff;
-padding:35px;
-text-align:center;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-.card-title{
-font-size:30px;
-font-weight:bold;
-color:#7a0000;
-border-bottom:1px dashed #b8860b;
-padding-bottom:14px;
-margin-bottom:25px;
-}
-.info-item{
-display:flex;
-gap:18px;
-margin-bottom:25px;
-align-items:flex-start;
-}
-.icon{
-width:48px;
-height:48px;
-min-width:48px;
-border-radius:50%;
-background:#7a0000;
-color:#ffd76a;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:23px;
-}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;}
+.info-card,.line-card{border-radius:14px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.10);}
+.info-card{background:#fff;padding:35px;}
+.line-card{background:linear-gradient(145deg,#7a0000,#9a1a1a);color:#fff;padding:35px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+.card-title{font-size:30px;font-weight:bold;color:#7a0000;border-bottom:1px dashed #b8860b;padding-bottom:14px;margin-bottom:25px;}
+.info-item{display:flex;gap:18px;margin-bottom:25px;align-items:flex-start;}
+.icon{width:48px;height:48px;min-width:48px;border-radius:50%;background:#7a0000;color:#ffd76a;display:flex;align-items:center;justify-content:center;font-size:23px;}
 .info-item h3{font-size:18px;color:#7a0000;margin-bottom:3px;}
-.info-item p{font-size:17px;color:#333;word-break:break-word;}
+.info-item p{font-size:17px;color:#333;overflow-wrap:anywhere;}
 .service-list{margin:5px 0 0 20px;padding-left:18px;}
 .service-list li{margin-bottom:3px;}
-
 /* LINE */
 .line-card h2{font-size:32px;margin-bottom:5px;color:#ffd76a;}
 .line-subtitle{font-size:17px;margin-bottom:20px;opacity:.95;}
-.qr-wrap{
-background:#fff;
-padding:14px;
-border-radius:10px;
-width:min(330px,90%);
-box-shadow:0 4px 15px rgba(0,0,0,.18);
-}
+.qr-wrap{background:#fff;padding:14px;border-radius:10px;width:min(330px,90%);box-shadow:0 4px 15px rgba(0,0,0,.18);}
 .qr-wrap img{display:block;width:100%;height:auto;border-radius:5px;}
-.join-box{
-width:100%;
-background:#fff8e6;
-color:#7a0000;
-border-radius:12px;
-padding:18px 15px;
-margin-top:18px;
-}
+.join-box{width:100%;background:#fff8e6;color:#7a0000;border-radius:12px;padding:18px 15px;margin-top:18px;}
 .join-box h3{font-size:22px;margin-bottom:10px;}
 .join-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 .step{font-size:14px;line-height:1.6;}
-.step-number{
-width:42px;height:42px;
-margin:0 auto 8px;
-border-radius:50%;
-background:#7a0000;
-color:#ffd76a;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-font-size:18px;
-}
-.message{
-margin-top:30px;
-background:#fffdf7;
-border:1px solid #e5dfcf;
-border-radius:14px;
-padding:28px 35px;
-text-align:center;
-box-shadow:0 3px 12px rgba(0,0,0,.06);
-}
+.step-number{width:42px;height:42px;margin:0 auto 8px;border-radius:50%;background:#7a0000;color:#ffd76a;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;}
+.message{margin-top:30px;background:#fffdf7;border:1px solid #e5dfcf;border-radius:14px;padding:28px 35px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.06);}
 .message h2{color:#7a0000;font-size:24px;margin-bottom:8px;}
 .message p{color:#555;font-size:17px;}
-
-/* Footer - 與 index.html 一致 */
-footer{
-margin-top:55px;
-background:#2a2a2a;
-color:#fff;
-padding:22px 30px;
-font-size:14px;
-}
-.footer-inner{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-}
+/* Footer */
+footer{margin-top:55px;background:#2a2a2a;color:#fff;padding:22px 30px;font-size:14px;}
+.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;}
+/* 手機版：沿用全站統一格式，僅調整小螢幕 */
 @media(max-width:768px){
-.service-time{font-size:13px;line-height:1.7;}
-.header-inner{flex-direction:column;gap:20px;}
-.logo{font-size:30px;}
-nav ul{flex-wrap:wrap;justify-content:center;gap:12px 18px;}
-nav a{font-size:16px;}
-.hero{min-height:240px;padding:40px 25px;}
-.hero h1{font-size:38px;}
-.hero p{font-size:17px;}
-.contact-grid{grid-template-columns:1fr;}
-.info-card,.line-card{padding:25px;}
-.join-steps{grid-template-columns:1fr;gap:14px;}
-.footer-inner{flex-direction:column;text-align:center;}
+  html{-webkit-text-size-adjust:100%;}
+  body{overflow-wrap:anywhere;}
+  img,video,iframe{max-width:100%;}
+  .service-time{font-size:13px;line-height:1.7;padding:9px 12px;letter-spacing:0;}
+  header .header-inner{width:100%;max-width:100%;flex-direction:column;align-items:stretch;gap:14px;padding:16px;}
+  .logo{text-align:center;font-size:30px;line-height:1.35;}
+  nav{width:100%;}
+  nav ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:6px;}
+  nav li{min-width:0;}
+  nav a{display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 4px;border:1px solid rgba(255,255,255,.28);border-radius:6px;font-size:14px;line-height:1.4;text-align:center;}
+  nav a:hover,nav a:focus-visible{background:rgba(255,255,255,.12);border-color:#ffd76a;}
+  .hero{width:100%;min-height:0;padding:30px 18px;}
+  .hero-content{padding-left:16px;}
+  .hero h1{font-size:clamp(30px,7vw,38px);line-height:1.4;}
+  .hero p{font-size:16px;line-height:1.8;}
+  .main{width:100%;margin:26px auto;padding:0 16px;}
+  .contact-grid{grid-template-columns:minmax(0,1fr);gap:18px;}
+  .info-card,.line-card{min-width:0;padding:22px;}
+  .card-title{font-size:25px;margin-bottom:20px;}
+  .info-item{gap:12px;margin-bottom:20px;}
+  .icon{width:42px;height:42px;min-width:42px;font-size:20px;}
+  .info-item p{font-size:16px;}
+  .line-card h2{font-size:28px;}
+  .join-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .step{font-size:13px;}
+  .message{margin-top:20px;padding:22px 18px;}
+  .message h2{font-size:21px;}
+  .message p{font-size:16px;}
+  footer{margin-top:32px;padding:20px 16px;}
+  .footer-inner{flex-direction:column;align-items:center;gap:6px;text-align:center;}
 }
-
-
-/* 手機版排版補強：只在 768px 以下生效，電腦版既有 CSS 不變 */
-@media screen and (max-width: 768px) {
-  html { -webkit-text-size-adjust: 100%; }
-  body { overflow-wrap: anywhere; }
-  img, video, iframe { max-width: 100%; }
-
-  header .header-inner {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-    padding: 16px;
-  }
-  header .logo {
-    text-align: center;
-    font-size: 30px;
-    line-height: 1.35;
-  }
-  nav { width: 100%; }
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: stretch;
-    align-items: stretch;
-    width: 100%;
-    gap: 6px;
-  }
-  nav li { min-width: 0; }
-  nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 42px;
-    padding: 8px 4px;
-    border: 1px solid rgba(255,255,255,.28);
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: center;
-  }
-
-  .main-container, .main, .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 24px auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .title-section { font-size: 28px; line-height: 1.45; }
-  .page-title { font-size: clamp(28px, 7vw, 36px); line-height: 1.4; }
-  .article, .card, .card-content, .contact-card, .donation-card {
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-  .article { padding: 18px; }
-  .article img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
-  .article p { font-size: 16px; line-height: 1.9; }
-  .cards { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  .card img { width: 100%; height: auto; max-height: 260px; object-fit: cover; }
-  .hero { min-height: 0; padding: 30px 18px; }
-  .contact-grid, .info-grid, .donation-grid, .service-grid { grid-template-columns: minmax(0, 1fr); }
-  table { display: block; max-width: 100%; overflow-x: auto; }
-  input, select, textarea, button { max-width: 100%; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; text-align: left; }
-  footer { padding: 20px 16px; }
+@media(max-width:380px){
+  header .header-inner{padding-left:12px;padding-right:12px;}
+  nav ul{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .service-time{font-size:12px;line-height:1.7;}
+  .main{padding-left:12px;padding-right:12px;}
+  .info-card,.line-card{padding:16px;}
+  .info-item{gap:9px;}
+  .join-steps{grid-template-columns:1fr;gap:14px;}
+  .message{padding:18px 14px;}
 }
-
-@media screen and (max-width: 380px) {
-  header .header-inner { padding-left: 12px; padding-right: 12px; }
-  nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .main-container, .main, .container { padding-left: 12px; padding-right: 12px; }
-  .article { padding: 14px; }
-  .service-time { font-size: 12px; letter-spacing: 0; line-height: 1.7; }
-}
-
 </style>
 </head>
 <body>
-<div class="service-time">
-<span>📢 辦事時間：</span>
-每週三 18:00－21:00　｜　每週六 15:00－21:00　｜　國定假日休辦
-</div>
+<div class="service-time"><span>📢 辦事時間：</span>每週三 18:00－21:00　｜　每週六 15:00－21:00　｜　國定假日休辦</div>
 <header>
 <div class="header-inner">
 <div class="logo">元眞道場</div>
-<nav>
-<ul>
+<nav><ul>
 <li><a href="index.html">首頁</a></li>
 <li><a href="about.html">道場介紹</a></li>
 <li><a href="share.html">心得分享</a></li>
 <li><a href="chaoshan.html">朝山活動</a></li>
 <li><a href="donate.html">捐款專區</a></li>
 <li><a class="active" href="contact.html">聯絡我們</a></li>
-</ul>
-</nav>
+</ul></nav>
 </div>
 </header>
-
 <section class="hero">
 <div class="hero-content">
 <h1>聯絡我們</h1>
 <p>若您有任何問題、建議或想進一步了解道場資訊，<br>歡迎透過以下方式與我們聯繫。</p>
 </div>
 </section>
-
 <main class="main">
 <div class="contact-grid">
 <section class="info-card">
 <h2 class="card-title">☘ 聯絡資訊</h2>
-<div class="info-item">
-<div class="icon">📍</div>
-<div><h3>會址</h3><p>桃園市中壢區龍岡路三段124巷43號1樓</p></div>
-</div>
-<div class="info-item">
-<div class="icon">◷</div>
-<div><h3>辦事時間</h3><p>每週三 18:00－21:00<br>每週六 15:00－21:00<br>國定假日休辦</p></div>
-</div>
-<div class="info-item">
-<div class="icon">☎</div>
-<div><h3>道場電話</h3><p><a href="tel:03-4280297" style="color:#7a0000;text-decoration:none;">03-4280297</a></p></div>
-</div>
-<div class="info-item">
-<div class="icon">✉</div>
-<div><h3>電子信箱</h3><p>yuanjhenyj@gmail.com</p></div>
-</div>
-<div class="info-item">
-<div class="icon">✦</div>
-<div><h3>服務內容</h3>
-<ul class="service-list">
-<li>修行諮詢與輔導</li>
-<li>心靈關懷與支持</li>
-<li>家庭和諧教育推廣</li>
-<li>公益與慈善活動</li>
-</ul>
-</div>
-</div>
+<div class="info-item"><div class="icon">📍</div><div><h3>會址</h3><p>桃園市中壢區龍岡路三段124巷43號1樓</p></div></div>
+<div class="info-item"><div class="icon">◷</div><div><h3>辦事時間</h3><p>每週三 18:00－21:00<br>每週六 15:00－21:00<br>國定假日休辦</p></div></div>
+<div class="info-item"><div class="icon">☎</div><div><h3>道場電話</h3><p><a href="tel:03-4280297" style="color:#7a0000;text-decoration:none;">03-4280297</a></p></div></div>
+<div class="info-item"><div class="icon">✉</div><div><h3>電子信箱</h3><p>yuanjhenyj@gmail.com</p></div></div>
+<div class="info-item"><div class="icon">✦</div><div><h3>服務內容</h3><ul class="service-list"><li>修行諮詢與輔導</li><li>心靈關懷與支持</li><li>家庭和諧教育推廣</li><li>公益與慈善活動</li></ul></div></div>
 </section>
-
 <section class="line-card">
-<h2>歡迎加入</h2>
-<div class="line-subtitle">LINE 官方帳號</div>
+<h2>歡迎加入</h2><div class="line-subtitle">LINE 官方帳號</div>
 <p>透過 LINE 與我們聯繫<br>即時獲取道場最新消息與活動資訊！</p>
-<div class="qr-wrap">
-<img src="line-qr-corrected.png" alt="元眞道場 LINE QR Code">
-</div>
-<div class="join-box">
-<h3>加入方式</h3>
-<div class="join-steps">
+<div class="qr-wrap"><img src="line-qr-corrected.png" alt="元眞道場 LINE QR Code"></div>
+<div class="join-box"><h3>加入方式</h3><div class="join-steps">
 <div class="step"><div class="step-number">1</div>開啟 LINE<br>點選「加入好友」</div>
 <div class="step"><div class="step-number">2</div>點選掃描功能<br>掃描上方 QR Code</div>
 <div class="step"><div class="step-number">3</div>加入好友<br>開始與我們聯繫</div>
-</div>
-</div>
+</div></div>
 </section>
 </div>
-
-<section class="message">
-<h2>您的留言與建議，將幫助我們做得更好！</h2>
-<p>感謝您的支持與信任，願我們一同修行，共同成長。</p>
-</section>
+<section class="message"><h2>您的留言與建議，將幫助我們做得更好！</h2><p>感謝您的支持與信任，願我們一同修行，共同成長。</p></section>
 </main>
-
-<footer>
-<div class="footer-inner">
-<div>© 2026 元眞道場｜版權所有</div>
-<div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div>
-</div>
-</footer>
+<footer><div class="footer-inner"><div>© 2026 元眞道場｜版權所有</div><div>會址：桃園市中壢區龍岡路三段124巷43號1樓</div></div></footer>
 </body>
 </html>
