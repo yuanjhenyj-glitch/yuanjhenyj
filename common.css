@@ -1,20 +1,21 @@
-/* 元眞道場全站共用樣式：統一頁首與辦事時間，保留各頁內容設計 */
+/* 元眞道場全站共用樣式：只統一頁首與辦事時間，保留各頁內容設計 */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; }
 
-/* 辦事時間：所有頁面使用同一組 HTML 結構、字距、段距與高度 */
-.service-time {
-  width: 100% !important;
-  min-height: 47px !important;
-  margin: 0 !important;
-  padding: 10px 15px !important;
+/* 辦事時間橫幅：六頁使用相同 HTML 與固定樣式 */
+body > .service-time {
   display: flex !important;
   flex-flow: row wrap !important;
   align-items: center !important;
   justify-content: center !important;
-  column-gap: 9px !important;
-  row-gap: 2px !important;
+  gap: 0 9px !important;
+  width: 100% !important;
+  min-height: 47px !important;
+  margin: 0 !important;
+  padding: 10px 15px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   background: #5b0000 !important;
   color: #fff !important;
   text-align: center !important;
@@ -24,156 +25,102 @@ body { font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; }
   letter-spacing: 1px !important;
   line-height: 27px !important;
 }
-.service-time .service-label { color: #ffd76a !important; white-space: nowrap !important; }
-.service-time .service-detail { color: #fff !important; white-space: nowrap !important; }
-.service-time .service-separator { color: #fff !important; white-space: nowrap !important; }
+body > .service-time .service-label { color: #ffd76a !important; white-space: nowrap !important; }
+body > .service-time .service-detail { color: #fff !important; white-space: nowrap !important; }
+body > .service-time .service-separator { color: #fff !important; white-space: nowrap !important; }
 
-/* 頁首與導覽列：桌機每頁皆為滿版漸層背景、固定 90px 高 */
-header {
+/* 頁首背景橫幅：六頁共用同一尺寸、漸層、陰影 */
+body > header.site-header {
   display: block !important;
   width: 100% !important;
   height: 90px !important;
   min-height: 90px !important;
   margin: 0 !important;
   padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   background: linear-gradient(90deg, #7a0000 0%, #b8860b 100%) !important;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
   color: #fff !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2) !important;
 }
-header .header-inner {
+body > header.site-header .header-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
   width: 100% !important;
   max-width: 1200px !important;
   height: 90px !important;
   min-height: 90px !important;
   margin: 0 auto !important;
   padding: 0 24px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  gap: 20px !important;
 }
-header .logo {
+body > header.site-header .logo {
   flex: 0 0 auto !important;
   margin: 0 !important;
+  padding: 0 !important;
   color: #fff !important;
   font-size: 38px !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
+  white-space: nowrap !important;
 }
-header nav { min-width: 0 !important; margin: 0 !important; }
-header nav ul {
+body > header.site-header nav { display: block !important; width: auto !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; }
+body > header.site-header nav ul {
   display: flex !important;
   flex-flow: row nowrap !important;
   align-items: center !important;
   justify-content: flex-end !important;
-  list-style: none !important;
+  gap: 8px 18px !important;
+  width: auto !important;
   margin: 0 !important;
   padding: 0 !important;
-  gap: 8px 18px !important;
+  list-style: none !important;
 }
-header nav li { margin: 0 !important; padding: 0 !important; }
-header nav a {
+body > header.site-header nav li { margin: 0 !important; padding: 0 !important; }
+body > header.site-header nav a {
   display: inline-block !important;
   margin: 0 !important;
   padding: 6px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   color: #fff !important;
   text-decoration: none !important;
+  text-underline-offset: initial !important;
+  font-family: "Microsoft JhengHei", "PingFang TC", sans-serif !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
   white-space: nowrap !important;
 }
-header nav a:hover { opacity: .7 !important; }
+body > header.site-header nav a:hover { opacity: .7 !important; }
 
-/* 不改動各頁內容，只統一主要內容外框與頁尾 */
+/* 不更動頁面主要內容 */
 .main-container, main.main, .main { max-width: 1000px; }
-footer {
-  background: #2a2a2a !important;
-  color: #fff !important;
-  padding: 22px 30px !important;
-  font-size: 14px !important;
-}
-footer .footer-inner {
-  width: 100% !important;
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  gap: 12px 20px !important;
-}
+footer { background: #2a2a2a !important; color: #fff !important; padding: 22px 30px !important; font-size: 14px !important; }
+footer .footer-inner { width: 100% !important; max-width: 1200px !important; margin: 0 auto !important; display: flex !important; justify-content: space-between !important; align-items: center !important; gap: 12px 20px !important; }
 
 @media (max-width: 768px) {
-  .service-time {
-    min-height: 0 !important;
-    padding: 9px 12px !important;
-    column-gap: 6px !important;
-    row-gap: 2px !important;
-    font-size: 13px !important;
-    letter-spacing: 0 !important;
-    line-height: 1.7 !important;
-  }
-  .service-time .service-detail { white-space: normal !important; }
-  header { height: auto !important; min-height: 0 !important; }
-  header .header-inner {
-    height: auto !important;
-    min-height: 0 !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 14px !important;
-    padding: 16px !important;
-  }
-  header .logo {
-    text-align: center !important;
-    font-size: 30px !important;
-    line-height: 1.35 !important;
-    white-space: normal !important;
-  }
-  header nav { width: 100% !important; }
-  header nav ul {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    width: 100% !important;
-    gap: 6px !important;
-    justify-content: stretch !important;
-  }
-  header nav a {
-    display: flex !important;
-    min-height: 42px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 8px 4px !important;
-    border: 1px solid rgba(255,255,255,.28) !important;
-    border-radius: 6px !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-    white-space: normal !important;
-  }
-  .main-container, main.main, .main {
-    width: 100% !important;
-    max-width: 1000px !important;
-    margin-top: 26px !important;
-    margin-bottom: 26px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
+  body > .service-time { min-height: 0 !important; padding: 9px 12px !important; gap: 2px 6px !important; font-size: 13px !important; letter-spacing: 0 !important; line-height: 1.7 !important; }
+  body > .service-time .service-detail { white-space: normal !important; }
+  body > header.site-header { height: auto !important; min-height: 0 !important; }
+  body > header.site-header .header-inner { height: auto !important; min-height: 0 !important; flex-direction: column !important; align-items: stretch !important; gap: 14px !important; padding: 16px !important; }
+  body > header.site-header .logo { text-align: center !important; font-size: 30px !important; line-height: 1.35 !important; white-space: normal !important; }
+  body > header.site-header nav { width: 100% !important; }
+  body > header.site-header nav ul { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; width: 100% !important; gap: 6px !important; justify-content: stretch !important; }
+  body > header.site-header nav a { display: flex !important; min-height: 42px !important; align-items: center !important; justify-content: center !important; padding: 8px 4px !important; border: 1px solid rgba(255,255,255,.28) !important; border-radius: 6px !important; background: transparent !important; font-size: 14px !important; line-height: 1.4 !important; text-align: center !important; white-space: normal !important; }
+  .main-container, main.main, .main { width: 100% !important; max-width: 1000px !important; margin-top: 26px !important; margin-bottom: 26px !important; padding-left: 16px !important; padding-right: 16px !important; }
   footer { padding: 20px 16px !important; }
-  footer .footer-inner {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-    text-align: center !important;
-  }
+  footer .footer-inner { flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 6px !important; text-align: center !important; }
   img, video, iframe { max-width: 100%; }
 }
 @media (max-width: 380px) {
-  .service-time { font-size: 12px !important; line-height: 1.7 !important; }
-  header .header-inner { padding-left: 12px !important; padding-right: 12px !important; }
-  header nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  body > .service-time { font-size: 12px !important; line-height: 1.7 !important; }
+  body > header.site-header .header-inner { padding-left: 12px !important; padding-right: 12px !important; }
+  body > header.site-header nav ul { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
   .main-container, main.main, .main { padding-left: 12px !important; padding-right: 12px !important; }
 }
